@@ -15,20 +15,27 @@
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <!-- Header (можно оставить простым логотипом) -->
-  <header class="site-header" id="header" role="banner">
-    <div class="container site-header__inner">
-      <a class="logo" href="/" aria-label="MathBoost — на главную">MathBoost</a>
-      <nav class="nav" aria-label="Главная навигация">
-        <ul class="nav__list">
-          <li><a href="#features">Преимущества</a></li>
-          <li><a href="#program">Программа</a></li>
-          <li><a href="#testimonials">Отзывы</a></li>
-          <li><a href="#contact" class="btn btn--sm">Записаться</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header" id="header" role="banner">
+  <div class="container site-header__inner">
+    <a class="logo" href="/" aria-label="MathBoost — на главную">MathBoost</a>
+
+    <!-- Кнопка бургера для мобильных -->
+    <button class="nav-toggle" type="button" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Главная навигация">
+      <ul class="nav__list">
+        <li><a href="#features">Преимущества</a></li>
+        <li><a href="#program">Программа</a></li>
+        <li><a href="#testimonials">Отзывы</a></li>
+        <li><a href="#contact" class="btn btn--sm">Записаться</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main id="main">
     <!-- HERO: фон-фото класса + белая карточка с заголовком, подзаголовком и CTA -->
@@ -173,6 +180,25 @@
       <p>© MathBoost, 2025</p>
     </div>
   </footer>
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav__list a');
 
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav--open');
+      navToggle.classList.toggle('nav-toggle--open');
+    });
+
+    // закрывать меню после клика по ссылке
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('nav--open');
+        navToggle.classList.remove('nav-toggle--open');
+      });
+    });
+  }
+</script>
 </body>
 </html>
