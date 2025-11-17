@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathBoost — онлайн-курсы по математике</title>
+  <meta name="description" content="Онлайн-школа математики: индивидуальные планы, опытные преподаватели, интерактивная практика." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Подставишь Inter/Poppins из Uizard Design System -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- Header (можно оставить простым логотипом) -->
+  <header class="site-header" id="header" role="banner">
+    <div class="container site-header__inner">
+      <a class="logo" href="/" aria-label="MathBoost — на главную">MathBoost</a>
+      <nav class="nav" aria-label="Главная навигация">
+        <ul class="nav__list">
+          <li><a href="#features">Преимущества</a></li>
+          <li><a href="#program">Программа</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+          <li><a href="#contact" class="btn btn--sm">Записаться</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: фон-фото класса + белая карточка с заголовком, подзаголовком и CTA -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- фон задашь через CSS: background-image -->
+      <div class="container">
+        <div class="hero__card" role="group" aria-labelledby="hero-title hero-desc">
+          <h1 id="hero-title" class="hero__title">Открой силу математики вместе с MathBoost</h1>
+          <p id="hero-desc" class="hero__subtitle">
+            Мы предлагаем уникальный подход к изучению математики, который помогает каждому ученику обрести уверенность и достичь успеха.
+          </p>
+          <a href="#contact" class="btn btn--primary">Начать обучение</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE / FEATURES: 3 карточки как на втором скрине -->
+    <section class="features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title" class="section-title">Почему выбирают MathBoost?</h2>
+        <ul class="cards cards--3" role="list">
+          <li class="card feature-card">
+            <div class="feature-card__icon" aria-hidden="true"></div>
+            <h3 class="feature-card__title">Опытные преподаватели</h3>
+            <p class="feature-card__text">Наши преподаватели — опытные специалисты, увлечённые обучением математике.</p>
+          </li>
+          <li class="card feature-card">
+            <div class="feature-card__icon" aria-hidden="true"></div>
+            <h3 class="feature-card__title">Индивидуальная программа</h3>
+            <p class="feature-card__text">Мы подбираем программу под уровень и цели каждого ученика.</p>
+          </li>
+          <li class="card feature-card">
+            <div class="feature-card__icon" aria-hidden="true"></div>
+            <h3 class="feature-card__title">Подтверждённые результаты</h3>
+            <p class="feature-card__text">Наши студенты стабильно показывают более высокие результаты и оценки.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+<!-- PROGRAM: 6 карточек (grid 3x2) -->
+<section class="program" id="program" aria-labelledby="program-title">
+  <div class="container">
+    <h2 id="program-title" class="section-title">Наша программа обучения</h2>
+
+    <ul class="program-grid" role="list">
+
+      <li class="program-card">
+        <h3 class="program-card__title">Алгебра</h3>
+        <p class="program-card__text">Основы алгебраических понятий и приёмов решения задач.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+      <li class="program-card">
+        <h3 class="program-card__title">Основы геометрии</h3>
+        <p class="program-card__text">Изучение фигур, размеров и свойств пространства.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+      <li class="program-card">
+        <h3 class="program-card__title">Введение в математический анализ</h3>
+        <p class="program-card__text">Производные и интегралы для понимания процессов изменения.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+      <li class="program-card">
+        <h3 class="program-card__title">Основы статистики</h3>
+        <p class="program-card__text">Данные, вероятность и распределения.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+      <li class="program-card">
+        <h3 class="program-card__title">Тригонометрия</h3>
+        <p class="program-card__text">Углы, треугольники и периодические функции.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+      <li class="program-card">
+        <h3 class="program-card__title">Продвинутая алгебра</h3>
+        <p class="program-card__text">Уравнения, системы и сложные алгебраические темы.</p>
+        <a href="#" class="program-card__btn">Подробнее</a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 id="testimonials-title" class="section-title">Отзывы наших студентов</h2>
+
+    <ul class="testimonials-list">
+      <li class="testimonial-item">
+        <p class="testimonial-text">
+          «MathBoost полностью изменил мой подход к математике. Преподаватели просто отличные!»
+        </p>
+        <p class="testimonial-author">— Алексей Иванов</p>
+      </li>
+
+      <li class="testimonial-item">
+        <p class="testimonial-text">
+          «Теперь я чувствую себя увереннее и лучше готовлюсь к экзаменам.»
+        </p>
+        <p class="testimonial-author">— Екатерина Смирнова</p>
+      </li>
+
+      <li class="testimonial-item">
+        <p class="testimonial-text">
+          «Индивидуальная программа помогла мне разобраться в сложных темах.»
+        </p>
+        <p class="testimonial-author">— Михаил Кузнецов</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <!-- CONTACT: белая карточка формы на сером фоне -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Свяжитесь с нами</h2>
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" id="name" name="name" type="text" placeholder="" required />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" id="email" name="email" type="email" placeholder="" required />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="message">Сообщение</label>
+            <textarea class="form__input form__textarea" id="message" name="message" rows="5" placeholder=""></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить сообщение</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© MathBoost, 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
