@@ -517,11 +517,21 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   }
 }
 
-
 .site-footer {
   background: #f3f6fb;
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
   color: #333;
+}
+
+/* Мобильная адаптация навбара */
+@media (max-width: 768px) {
+  .site-header .nav {
+    gap: 20px;
+  }
+
+  .site-header a {
+    font-size: 1rem;
+  }
 }
