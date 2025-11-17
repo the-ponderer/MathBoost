@@ -1,12 +1,11 @@
 html, body { height: 100%; }
-body { margin: 0; }              /* ← убирает тот самый зазор */
+body { margin: 0; }
 * { box-sizing: border-box; }
 
-/* Скрыт по умолчанию, доступен скринридерам */
 .skip-link{
-  position: fixed;      /* не уезжает при скролле */
+  position: fixed;
   left: 12px;
-  top: 12px;            /* появится под верхним краем */
+  top: 12px;
   z-index: 1000;
   padding: 10px 14px;
   border-radius: 10px;
@@ -15,16 +14,13 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 4px 16px rgba(0,0,0,.15);
-  /* по умолчанию визуально скрываем */
   transform: translateY(-180%);
   transition: transform .2s ease;
 }
 
-/* Показывается только при видимом фокусе (Tab) */
 .skip-link:focus-visible{
   transform: translateY(0);
 }
-
 /* === HEADER === */
 .site-header {
   position: fixed;
@@ -44,7 +40,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
 }
 
-/* контейнер */
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -54,7 +49,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   padding: 0 24px;
 }
 
-/* логотип */
 .logo {
   font-weight: 700;
   font-size: 1.25rem;
@@ -62,7 +56,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   text-decoration: none;
 }
 
-/* навигация */
 .nav__list {
   display: flex;
   align-items: center;
@@ -84,9 +77,8 @@ body { margin: 0; }              /* ← убирает тот самый заз�
 }
 
 .nav__list a:hover {
-  color: #dbeafe; /* светло-голубой hover */
+  color: #dbeafe;
 }
-
 /* кнопка “Записаться” */
 .btn {
   display: inline-block;
@@ -107,32 +99,30 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   font-size: 0.9rem;
 }
 
-
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
 /* HERO: фон + комфортные отступы сверху/снизу */
 .hero{
   position: relative;
   min-height: 100vh;
-  display: grid;                /* проще центрировать карточку */
+  display: grid;
   place-items: center;
   text-align: center;
   margin: 0;
-  padding: 0 20px;      /* учитываем фикс-хедер */
+  padding: 0 20px;
 
   background-image:
     linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.25)),
-    url("images/Image1.png");   /* твоя картинка */
+    url("images/Image1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* <<< ВОТ ЭТО ГЛАВНОЕ: полупрозрачная белая карточка >>> */
+/* полупрозрачная белая карточка */
 .hero__card{
   position: relative;
   z-index: 1;
@@ -146,7 +136,7 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   -webkit-backdrop-filter: blur(6px);
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
-  color: #111;                  /* черный текст внутри */
+  color: #111;
 }
 
 /* Типографика внутри карточки */
@@ -163,7 +153,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   color: #333;
 }
 
-/* Кнопка — как была */
 .btn--primary{
   background:#3B82F6; 
   color:#fff;
@@ -192,7 +181,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   transform: translateY(-2px);
 }
 
-/* для адаптива */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 1.8rem;
@@ -201,9 +189,7 @@ body { margin: 0; }              /* ← убирает тот самый заз�
     font-size: 1rem;
   }
 }
-
 /* ====== FEATURES / WHY CHOOSE ====== */
-
 .features {
   padding: 80px 20px;
   background: #ffffff;
@@ -238,7 +224,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   flex-direction: column;
   justify-content: center;
 }
-
 /* фоны как на макете: серый — голубой — синий */
 .cards--3 > li:nth-child(1) {
   background: #dedede;
@@ -252,7 +237,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   background: #3b82f6;
   color: #ffffff;
 }
-
 /* заголовок и текст */
 .feature-card__title {
   font-size: 18px;
@@ -266,21 +250,17 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   line-height: 1.5;
   color: #333333;
 }
-
 /* чтобы в синей карточке текст был белым */
 .cards--3 > li:nth-child(3) .feature-card__title,
 .cards--3 > li:nth-child(3) .feature-card__text {
   color: #ffffff;
 }
-
 /* иконка, если будешь добавлять */
 .feature-card__icon {
   font-size: 26px;
   margin-bottom: 10px;
 }
-
 /* === PROGRAM SECTION === */
-
 .program {
   padding: 80px 0;
 }
@@ -290,7 +270,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   font-size: 2rem;
   margin-bottom: 40px;
 }
-
 /* сетка 3×2 */
 .program-grid {
   display: grid;
@@ -300,10 +279,9 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   padding: 0;
   margin: 0;
 }
-
 /* Карточки программы */
 .program-card {
-  background: #F4F7FF; /* светло-голубой фон как в макете */
+  background: #F4F7FF;
   border-radius: 14px;
   padding: 25px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -325,8 +303,7 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
-/* кнопка Learn more */
+/* кнопка подробнее */
 .program-card__btn {
   display: inline-block;
   background: #3B82F6;
@@ -342,7 +319,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   background: #2563EB;
 }
 
-/* адаптив */
 @media (max-width: 992px) {
   .program-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -354,9 +330,7 @@ body { margin: 0; }              /* ← убирает тот самый заз�
     grid-template-columns: 1fr;
   }
 }
-
 /* === TESTIMONIALS === */
-
 .testimonials {
   background: #f9fafb;        /* очень светлый серый фон */
   padding: 60px 0;            /* вертикальные отступы, чтобы секция “дышала” */
@@ -393,14 +367,12 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   text-align: center;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
   .testimonials-list {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 }
-
 /* ==== CONTACT SECTION ==== */
 .contact {
   background: #f4f7fc; /* светло-серый фон как на макете */
@@ -412,7 +384,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   flex-direction: column;  /* располагать заголовок и форму колонкой */
   align-items: center;     /* центрировать по горизонтали */
 }
-
 /* заголовок формы */
 #contact-title {
   text-align: center;
@@ -432,7 +403,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   text-align: center;
   margin-bottom: 30px;
 }
-
 /* строки формы */
 .form__row {
   display: flex;
@@ -440,14 +410,12 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   margin-bottom: 20px;
 }
 
-/* подписи */
 .form__label {
   margin-bottom: 6px;
   font-weight: 600;
   font-size: 1rem;
 }
 
-/* поля ввода */
 .form__input {
   width: 100%;
   padding: 12px 14px;
@@ -466,7 +434,6 @@ body { margin: 0; }              /* ← убирает тот самый заз�
   resize: vertical;
 }
 
-/* кнопка */
 .btn.btn--primary {
   display: inline-block;
   background: #3b82f6;
